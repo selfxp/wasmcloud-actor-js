@@ -1,0 +1,5 @@
+package component:rust;
+
+world hello {
+    export hello-world: func() -> string;
+}

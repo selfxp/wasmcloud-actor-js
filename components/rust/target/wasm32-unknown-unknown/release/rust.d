@@ -1,0 +1,1 @@
+/Users/selfxp/work/wasm/research/examples/actors-hello-world-js/components/rust/target/wasm32-unknown-unknown/release/rust.wasm: /Users/selfxp/work/wasm/research/examples/actors-hello-world-js/components/rust/src/bindings.rs /Users/selfxp/work/wasm/research/examples/actors-hello-world-js/components/rust/src/lib.rs
