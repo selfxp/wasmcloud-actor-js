@@ -25,7 +25,9 @@ import { helloWorld } from "./components/rust/jco-transpile/rust.js";
 
 5. Build the actor 
 ```
-wash build
+npm install
+tsc
+jco componentize -w wit -o dist/http-hello-world.wasm dist/http-hello-world.js
 ```
 
 it fails with
