@@ -5,7 +5,8 @@ import {
   Fields,
 } from "wasi:http/types@0.2.0";
 
-import { helloWorld } from "./components/rust/jco-transpile/rust.js";
+// @ts-ignore
+import { helloWorld } from "component:rust/ih";
 
 // Implementation of wasi-http incoming-handler
 //
