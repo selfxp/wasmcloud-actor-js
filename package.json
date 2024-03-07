@@ -5,10 +5,10 @@
   "main": "http-hello-world.js",
   "scripts": {
     "build:tsc": "tsc",
-    "build:component": "jco componentize -w wit -o dist/http-hello-world.wasm dist/http-hello-world.js",
+    "build:component": "jco componentize dist/http-hello-world.js --wit wit --world-name hello -o dist/component.wasm && wasm-tools compose dist/component.wasm -d ./components/rust/target/wasm32-wasi/release/rust.wasm -o dist/http-hello-world.wasm",
     "build:actor": "wash build --sign-only --config-path wasmcloud.toml",
     "build": "npm run build:tsc && npm run build:component && npm run build:actor",
-    "actor:start": "wash start actor file://$(realpath dist/http_hello_world_s.wasm) --auction-timeout-ms 10000 --timeout-ms 10000",
+    "actor:start": "wash start actor file://$(realpath build/http_hello_world_s.wasm) --auction-timeout-ms 10000 --timeout-ms 10000",
     "actor:stop": "wash stop actor typescript-http-hello-world",
     "wadm:start": "wash app deploy wadm.yaml",
     "wadm:stop": "wash app delete typescript-http-hello-world v0.0.1",
